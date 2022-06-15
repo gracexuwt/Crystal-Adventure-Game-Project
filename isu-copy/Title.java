@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Title extends World
 {
     //Game start and exit buttons
-    //private Button startButton = new Button(new GreenfootImage("StartButton-U.png"));
-    private Button exitButton = new Button(new GreenfootImage("ExitButton-U.png"));
+    private Button startButton = new Button(new GreenfootImage("Play-button.png"));
+    private Button exitButton = new Button(new GreenfootImage("ExitButton.png"));
     
     // Background music and sound effects
     public static GreenfootSound bgm = new GreenfootSound("Music.mp3");

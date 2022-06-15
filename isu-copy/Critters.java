@@ -6,9 +6,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Crystals extends Actor
+public class Critters extends Actor
 {
-    public static int numOfCrystals = 100;
+    public static int numOfCritters = 100;
     
     public static boolean gained150 = false;
     public static boolean gained200 = false;
@@ -18,7 +18,7 @@ public class Crystals extends Actor
      */
     public void act()
     {
-        setImage(new GreenfootImage("Golden Tickets: " + numOfCrystals, 30, new Color(255, 186, 8), new Color(0,0,0,0), Color.BLACK));
+        setImage(new GreenfootImage("Critters: " + numOfCritters, 30, new Color(255, 186, 8), new Color(0,0,0,0), Color.BLACK));
         
         //Used for tracking achievements
         if(getCurrency() >= 150)
@@ -34,13 +34,13 @@ public class Crystals extends Actor
     // Returns the number of tickets
     public static int getCurrency()
     {
-        return numOfCrystals;
+        return numOfCritters;
     }
     
     // Sets the number of tickets
     public static void setCurrency(int num)
     {
-        numOfCrystals = num;
+        numOfCritters = num;
     }
     
 }

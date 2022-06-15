@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Home extends World
 {
     //Mini game Button
-    private Button rps = new Button(new GreenfootImage("RPS.png"));
-    private Button jackpot = new Button(new GreenfootImage("jackpot.png"));
+    private Button rps = new Button(new GreenfootImage("1.png"));
+    private Button jackpot = new Button(new GreenfootImage("4.png"));
     
     // Menu, Achievements, Shop, Inventory Button
     private Button pausemenu = new Button(new GreenfootImage("MenuButton.png"));
@@ -25,7 +25,7 @@ public class Home extends World
     public Button musicOffMenu = new Button(new GreenfootImage("Menu-MusicOffButton.png"));
     
     // Amount of Golden Tickets the player has
-    public static Crystals currency = new Crystals();
+    public static Critters currency = new Critters();
     /**
      * Constructor for objects of class GameHall.
      * 
