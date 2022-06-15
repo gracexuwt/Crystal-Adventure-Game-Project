@@ -25,9 +25,7 @@ public class Home extends World
     public static Button backToHome = new Button(new GreenfootImage("BackToHomeButton.png"));
     public Button musicOnMenu = new Button(new GreenfootImage("Menu-MusicOnButton.png"));
     public Button musicOffMenu = new Button(new GreenfootImage("Menu-MusicOffButton.png"));
-    
-    // Amount of Golden Tickets the player has
-    public static Critters currency = new Critters();
+
     /**
      * Constructor for objects of class GameHall.
      * 
@@ -47,7 +45,7 @@ public class Home extends World
     public void act()
     {
         //show Golden Tickets
-        addObject(currency, 873, 500);
+        addObject(Title.currency, 873, 500);
         if(Greenfoot.mouseClicked(rps))
         {
             Title.click.play();

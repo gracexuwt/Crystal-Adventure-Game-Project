@@ -37,13 +37,13 @@ public class Achievements extends World
         //Set up greyed achievements 
         addObject(fg, 240, 165);
         addObject(ag, 240, 270);
-        addObject(jp,240,372);
-        addObject(gt200, 240, 482);
-        addObject(gp, 734, 165);
+        addObject(gt200,240,372);
+        addObject(fi, 240, 482);
+        addObject(jp, 734, 165);
         addObject(mg, 734, 270);
-        addObject(fi, 734, 372);
+        addObject(gp, 734, 372);
         addObject(ai, 734, 482);
-        addObject(Home.backToHome, 820, 60);
+        addObject(Home.backToTitle, 820, 60);
         
         //Show latest achievements
         addAchievements();

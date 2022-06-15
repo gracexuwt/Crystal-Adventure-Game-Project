@@ -24,6 +24,9 @@ public class Title extends World
     private Button musicOn = new Button(new GreenfootImage("musicon.png"));
     private Button musicOff = new Button(new GreenfootImage("musicoff.png"));
     
+    // Amount of Golden Tickets the player has
+    public static Critters currency = new Critters();
+    
     public static boolean[] gamesPlayed = new boolean[4];
     /**
      * Constructor for objects of class MyWorld.

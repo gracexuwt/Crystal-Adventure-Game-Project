@@ -21,11 +21,7 @@ public class Critters extends Actor
         setImage(new GreenfootImage("Critters: " + numOfCritters, 30, Color.BLUE, new Color(0,0,0,0), Color.BLACK));
         
         //Used for tracking achievements
-        if(getCurrency() >= 150)
-        {
-            gained150 = true;
-        }
-        if(getCurrency() >= 200)
+        if(getCurrency() >= 1200)
         {
             gained200 = true;
         }
