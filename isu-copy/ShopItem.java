@@ -8,9 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ShopItem extends Actor
 {
-    private GreenfootImage board = new GreenfootImage(160, 160);
+    private GreenfootImage board = new GreenfootImage(160, 185);
     private Color pink = new Color(255, 198, 243);
-    private Font fnt = new Font(true, false, 30);
+    private Font fnt = new Font(true, false, 20);
     
     public GreenfootImage img; // See Buttons class for descriptions of these variables
     public int price; //price of the shop item
@@ -33,8 +33,9 @@ public class ShopItem extends Actor
         setImage(board);
         img.scale(150, 150 * img.getHeight() / img.getWidth());
         board.drawImage(img, 5, 5);
-        board.setColor(Color.BLACK);
+        board.setColor(Color.WHITE);
         board.setFont(fnt);
+        board.drawString(String.valueOf(price)+" Critters", 30, 180);
     }
     
     // If the player bought this shop item, the shop item is replaced with a "sold out" sign

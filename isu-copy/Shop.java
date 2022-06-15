@@ -56,7 +56,7 @@ public class Shop extends World
         int column = 0;
         for(ShopItem product : items.keySet())
         {
-            int startX = getWidth()/2 - 310;
+            int startX = getWidth()/2 - 305;
             if(column < 3){
                 addObject(product, startX + column%3 * 230, 200);
             }
