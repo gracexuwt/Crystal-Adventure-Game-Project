@@ -70,7 +70,7 @@ public class Shop extends World
     public void act()
     {
         addObject(Home.currency, 125, 23); 
-        addObject(Home.backToHome, 815, 420);
+        addObject(Home.backToHome, 815, 440);
                 
         // If user pressed on any shop item
         if(Greenfoot.mouseClicked(null))
