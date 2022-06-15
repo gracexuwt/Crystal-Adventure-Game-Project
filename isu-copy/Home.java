@@ -10,17 +10,19 @@ public class Home extends World
 {
     //Mini game Button
     private Button rps = new Button(new GreenfootImage("1.png"));
+    private Button adv = new Button(new GreenfootImage("2.png"));
+    private Button math = new Button(new GreenfootImage("3.png"));
     private Button jackpot = new Button(new GreenfootImage("4.png"));
     
     // Menu, Achievements, Shop, Inventory Button
-    private Button pausemenu = new Button(new GreenfootImage("MenuButton.png"));
-    private Button achievements = new Button(new GreenfootImage("AchievementsButton.png"));
+    private Button pausemenu = new Button(new GreenfootImage("Menu-button.png"));
     private Button shop = new Button(new GreenfootImage("ShopButton.png"));
     private Button inventory = new Button(new GreenfootImage("InventoryButton.png"));
+    private Button choose = new Button(new GreenfootImage("chooseButton.png"));
     // Pause menu Button
     public static Button resume = new Button(new GreenfootImage("resumebutton.png"));
     public static Button backToTitle = new Button(new GreenfootImage("BackToTitleButton.png"));
-    public static Button backToHome = new Button(new GreenfootImage("BackToArcadeButton.png"));
+    public static Button backToHome = new Button(new GreenfootImage("BackToHomeButton.png"));
     public Button musicOnMenu = new Button(new GreenfootImage("Menu-MusicOnButton.png"));
     public Button musicOffMenu = new Button(new GreenfootImage("Menu-MusicOffButton.png"));
     
@@ -34,36 +36,27 @@ public class Home extends World
     {    
         super(960, 540, 1); 
         
-        //add games
-        addObject(rps, 466, 220);
-        addObject(jackpot, 466, 384);
+        addObject(choose,480,300);
         //add pause menu & shop
-        addObject(pausemenu, 760, 92);
-        addObject(achievements, 760, 205);
-        addObject(shop, 760, 318);
-        addObject(inventory, 760, 432);
+        addObject(pausemenu, 170, 432);
+        addObject(shop, 480, 432);
+        addObject(inventory, 790, 432);
         
     }
     
     public void act()
     {
         //show Golden Tickets
-        addObject(currency, 130, 500);
+        addObject(currency, 873, 500);
         if(Greenfoot.mouseClicked(rps))
         {
             Title.click.play();
-            //Greenfoot.setWorld(new RockPaperScissor());
+            Greenfoot.setWorld(new RockPaperScissor());
         }
         else if(Greenfoot.mouseClicked(jackpot))
         {
             Title.click.play();
-            //Greenfoot.setWorld(new Jackpot());
-        }
-        //Achievements
-        if(Greenfoot.mouseClicked(achievements))
-        {
-            Title.click.play();
-            //Greenfoot.setWorld(new Achievements());
+            Greenfoot.setWorld(new Jackpot());
         }
         // Shop
         if(Greenfoot.mouseClicked(shop))
@@ -72,14 +65,19 @@ public class Home extends World
             if(!Button.shopExists) //initialize a new shop
             {
                 Button.shopExists = true;
-                //Greenfoot.setWorld(new Shop());
+                Greenfoot.setWorld(new Shop());
             }
             //else Greenfoot.setWorld(Shop.shop); //if player already went in the shop, then save the previous shop world
         }
         //Inventory
         if(Greenfoot.mouseClicked(inventory)){
             Title.click.play();
-            //Greenfoot.setWorld(new Inventory());
+            Greenfoot.setWorld(new Inventory());
+        }
+        //Choose Adventure
+        if(Greenfoot.mouseClicked(choose)){
+            Title.click.play();
+            drawAdventure();
         }
         //Menu
         if(Greenfoot.mouseClicked(pausemenu))
@@ -99,6 +97,7 @@ public class Home extends World
             removeObject(musicOffMenu);
         }
         checkPause(); 
+        checkGame();
     }
     
     // This method draws the pause menu
@@ -106,11 +105,43 @@ public class Home extends World
         removeObjects(getObjects(null)); //removes all Button on GameHall
         
         // Pause menu screen Button
-        //addObject(new Picture(new GreenfootImage("menuscreen.png")), 480, 270);
+        addObject(new Picture(new GreenfootImage("menuscreen.png")), 480, 270);
         addObject(resume, 480, 240);
         if(Title.bgm.isPlaying()) addObject(musicOnMenu, 480, 300);
         else addObject(musicOffMenu, 480, 300);
         addObject(backToTitle, 480, 360);
+    }
+    
+    //This method draw the choose your adventure screen
+    public void drawAdventure(){
+        removeObjects(getObjects(null));
+        addObject(new Picture(new GreenfootImage("quest.png")), 480, 270);
+        addObject(backToHome,130,500);
+        //add games
+        addObject(rps, 360, 220);
+        addObject(jackpot, 360, 400);
+        addObject(adv,600,220);
+        addObject(math,600,400);
+    }
+    
+    //Checks if player presses on a game
+    public void checkGame(){
+        if(Greenfoot.mouseClicked(jackpot)){
+            Title.click.play();
+            Greenfoot.setWorld(new Jackpot());
+        }
+        if(Greenfoot.mouseClicked(adv)){
+            Title.click.play();
+            Greenfoot.setWorld(new Adventure());
+        }
+        if(Greenfoot.mouseClicked(rps)){
+            Title.click.play();
+            Greenfoot.setWorld(new RockPaperScissor());
+        }
+        if(Greenfoot.mouseClicked(math)){
+            Title.click.play();
+            Greenfoot.setWorld(new MeowMath());
+        }
     }
     
     // This method checks whether the player presses resume, backtotitle, or backtoarcade

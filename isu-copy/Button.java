@@ -25,7 +25,7 @@ public class Button extends Actor
             if(firstMove){
                 firstMove = false; //this is no longer the first hover over the button
                 ifMoved = false; //player did not move away from button
-                //Title.cursor.play();
+                Title.cursor.play();
                 // Mouse hovers, then button enlarges
                 img.scale(img.getWidth() + 5, img.getHeight() +5); 
                 setImage(img);
