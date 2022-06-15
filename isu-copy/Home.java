@@ -67,7 +67,7 @@ public class Home extends World
                 Button.shopExists = true;
                 Greenfoot.setWorld(new Shop());
             }
-            //else Greenfoot.setWorld(Shop.shop); //if player already went in the shop, then save the previous shop world
+            else Greenfoot.setWorld(Shop.shop); //if player already went in the shop, then save the previous shop world
         }
         //Inventory
         if(Greenfoot.mouseClicked(inventory)){

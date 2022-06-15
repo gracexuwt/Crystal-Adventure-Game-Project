@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Critters extends Actor
 {
-    public static int numOfCritters = 100;
+    public static int numOfCritters = 1000;
     
     public static boolean gained150 = false;
     public static boolean gained200 = false;
