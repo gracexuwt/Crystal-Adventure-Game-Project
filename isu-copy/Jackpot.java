@@ -79,7 +79,7 @@ public class Jackpot extends World
             if(n==3){
                 setBackground(lamp);
                 Critters.setCurrency(Critters.getCurrency()+30);
-                Picture p = new Picture(new GreenfootImage("Woah, a lamp! Time to study with it!", 30, Color.WHITE, Color.BLACK));
+                Picture p = new Picture(new GreenfootImage("Woah, boba tea! Yummy!", 30, Color.WHITE, Color.BLACK));
                 addObject(p,480,270);
                 Greenfoot.delay(150);
                 removeObject(p);
