@@ -10,9 +10,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class RockPaperScissor extends World
 {
     // Buttons for player to interact with
-    private Button rock = new Button(new GreenfootImage("rockButton.png"));
-    private Button paper = new Button(new GreenfootImage("paperButton.png"));
-    private Button scissors = new Button(new GreenfootImage("scissorsButton.png"));
+    private Button rock = new Button(new GreenfootImage("Rock.png"));
+    private Button paper = new Button(new GreenfootImage("Paper.png"));
+    private Button scissors = new Button(new GreenfootImage("Scissors.png"));
     // Computer images for rock, paper, scissors
     private Picture computerRock = new Picture(new GreenfootImage("computerRock.png"));
     private Picture computerPaper = new Picture(new GreenfootImage("computerPaper.png"));
@@ -64,9 +64,9 @@ public class RockPaperScissor extends World
     // According to computer input, get the corresponding computer image
     private void getComputerImage(String str)
     {
-        if(str.equals("rock")) addObject(computerRock, 490, 165);
-        else if(str.equals("paper")) addObject(computerPaper,490, 165);
-        else if(str.equals("scissors")) addObject(computerScissors, 490, 165);
+        if(str.equals("rock")) addObject(computerRock, 470, 195);
+        else if(str.equals("paper")) addObject(computerPaper,470, 195);
+        else if(str.equals("scissors")) addObject(computerScissors, 470, 195);
     }
     // After delay, remove the computer image & string text
     private void removeCompImg()
@@ -106,20 +106,20 @@ public class RockPaperScissor extends World
         {
             Title.winSound.play();
             playerWins.add();
-            addObject(winString, 480, 270);
+            addObject(winString, 480, 300);
         }
         else if(str.equals(computerWonRound))
         {
             Title.loseSound.play();
             computerWins.add();
-            addObject(loseString, 480, 270);
+            addObject(loseString, 480, 300);
         }
         else if(str.equals(playerTie))
         {
-            addObject(tieString, 480, 270);
+            addObject(tieString, 480, 300);
         }
         getComputerImage(computerInput);
-        Greenfoot.delay(40); // time for player to see the string
+        Greenfoot.delay(50); // time for player to see the string
         removeCompImg();
     }
     
@@ -128,21 +128,21 @@ public class RockPaperScissor extends World
     {
         if(playerWins.getScore() >= 5) // player wins
         {
-            setBackground(new GreenfootImage("rps-WinScreen.png"));
+            setBackground(new GreenfootImage("rps-winscreen.png"));
             if(!ticketsAdded)
             {
-                Critters.setCurrency(Critters.getCurrency()+20);
+                Critters.setCurrency(Critters.getCurrency()+30);
             }
             ticketsAdded = true;
         }
         else // computer wins
         {
-            setBackground(new GreenfootImage("rps-LoseScreen.png")); 
+            setBackground(new GreenfootImage("rps-losescreen.png")); 
             if(!ticketsAdded)
             {
                 if(Critters.getCurrency() >= 10)
                 {
-                    Critters.setCurrency(Critters.getCurrency() -10);
+                    Critters.setCurrency(Critters.getCurrency() -15);
                 }
                 else
                 {
@@ -195,7 +195,7 @@ public class RockPaperScissor extends World
         //Check if player or computer hits 5 points first, then pop up game end screen
         if(playerWins.getScore() >= 5 || computerWins.getScore() >= 5)
         {
-            addObject(Home.backToHome, 495, 393);
+            addObject(Home.backToHome, 480, 383);
             gameEndScreen();
             Home.checkPause();
         }
