@@ -45,9 +45,11 @@ public class MeowMath extends World
     
     public void act(){
         if(Greenfoot.mouseClicked(b)){
-            addObject(button, 220, 420);
-            addObject(arrow,480,420);
-            addObject(gummi,740,420);
+            removeObjects(getObjects(null));
+            setBackground(new GreenfootImage("Choose A Cat.png"));
+            addObject(button, 220, 320);
+            addObject(arrow,480,320);
+            addObject(gummi,740,320);
         }
         if(Greenfoot.mouseClicked(arrow)){
             geometryQ1();
