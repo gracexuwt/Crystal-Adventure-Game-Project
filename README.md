@@ -7,10 +7,16 @@
 ###### Program used in development: Greenfoot Java
 ###### Purpose of project: Gain game development experience for gracexuwt and create an amazing art project for Sophia
 ###### How to start game: Download Greenfoot and open the game, then press on "Act" to start
-
+<br/>
+<br/>
+Follow Crystal, the protagonist, on a mission to rescue the endangered animals!
+<br/>
+Earn critters and free the cute animals from the adoption centre. You could spin the wheel, play rock paper scissors against Bingo the Monkey, travel to habitats across the world (Antarctica, Sahara desert, Amazon jungle), and do math problems in MeowMills Middle School.
 <br/>
 <br/>
 Ingame screenshots:
+<br/>
+<br/>
 
 ![image](https://user-images.githubusercontent.com/92956740/210129564-92674ab4-2147-4145-b6b3-d1a171779693.png)
 
