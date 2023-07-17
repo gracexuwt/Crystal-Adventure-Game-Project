@@ -2,7 +2,7 @@
 ### A heartwarming game of rescuing animals
  
  _____________________________________________________________________
-###### Contributor(s): gracexuwt - programmer, Sophia - graphic designer
+###### Contributor(s): gracexuwt (Grace Xu) - programmer, Sophia Xu - graphic designer
 ###### Date: June 6, 2022
 ###### Program used in development: Greenfoot Java
 ###### Purpose of project: Gain game development experience for gracexuwt and create an amazing art project for Sophia
