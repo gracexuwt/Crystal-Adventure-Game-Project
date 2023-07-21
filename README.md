@@ -7,6 +7,7 @@
 ###### Program used in development: Greenfoot Java
 ###### Purpose of project: Gain game development experience for gracexuwt and create an amazing art project for Sophia
 ###### How to start game: Download Greenfoot and open the game, then press on "Act" to start
+###### Video demo: https://drive.google.com/file/d/12TLratGj79VnJ-e2ZXQNdBWD9LqRpJm1/view?usp=drive_link
 <br/>
 <br/>
 Follow Crystal, the protagonist, on a mission to rescue the endangered animals!
